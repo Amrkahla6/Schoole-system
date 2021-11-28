@@ -7,7 +7,7 @@
                     <!-- menu item Dashboard-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#dashboard">
-                            <div class="pull-left"><i class="ti-home"></i><span class="right-nav-text">Dashboard</span>
+                            <div class="pull-left"><i class="ti-home"></i><span class="right-nav-text">@lang('main-side.dashboard')</span>
                             </div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
@@ -21,7 +21,7 @@
                         </ul>
                     </li>
                     <!-- menu title -->
-                    <li class="mt-10 mb-10 text-muted pl-4 font-medium menu-title">Components </li>
+                    <li class="pl-4 mt-10 mb-10 font-medium text-muted menu-title">Components </li>
                     <!-- menu item Elements-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#elements">
@@ -78,7 +78,7 @@
                     <!-- menu item mailbox-->
                     <li>
                         <a href="mail-box.html"><i class="ti-email"></i><span class="right-nav-text">Mail
-                                box</span> <span class="badge badge-pill badge-warning float-right mt-1">HOT</span> </a>
+                                box</span> <span class="float-right mt-1 badge badge-pill badge-warning">HOT</span> </a>
                     </li>
                     <!-- menu item Charts-->
                     <li>
@@ -110,11 +110,11 @@
                         </ul>
                     </li>
                     <!-- menu title -->
-                    <li class="mt-10 mb-10 text-muted pl-4 font-medium menu-title">Widgets, Forms & Tables </li>
+                    <li class="pl-4 mt-10 mb-10 font-medium text-muted menu-title">Widgets, Forms & Tables </li>
                     <!-- menu item Widgets-->
                     <li>
                         <a href="widgets.html"><i class="ti-blackboard"></i><span class="right-nav-text">Widgets</span>
-                            <span class="badge badge-pill badge-danger float-right mt-1">59</span> </a>
+                            <span class="float-right mt-1 badge badge-pill badge-danger">59</span> </a>
                     </li>
                     <!-- menu item Form-->
                     <li>
@@ -149,7 +149,7 @@
                             <li> <a href="data-table.html">Data table</a> </li>
                         </ul>
                     </li>
-                    <li class="mt-10 mb-10 text-muted pl-4 font-medium menu-title">More Pages</li>
+                    <li class="pl-4 mt-10 mb-10 font-medium text-muted menu-title">More Pages</li>
                     <!-- menu item Custom pages-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#custom-page">
@@ -189,7 +189,7 @@
                     <!-- menu item maps-->
                     <li>
                         <a href="maps.html"><i class="ti-location-pin"></i><span class="right-nav-text">maps</span>
-                            <span class="badge badge-pill badge-success float-right mt-1">06</span></a>
+                            <span class="float-right mt-1 badge badge-pill badge-success">06</span></a>
                     </li>
                     <!-- menu item timeline-->
                     <li>
