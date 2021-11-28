@@ -17,4 +17,5 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),'middleware' => [ 'lo
     Route::get('/', function () {
         return view('dashboard');
     });
+    Route::resource('grade', 'GradeController');
 });
