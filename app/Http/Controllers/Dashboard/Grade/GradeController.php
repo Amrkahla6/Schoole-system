@@ -1,10 +1,13 @@
-<?php 
+<?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Dashboard\Grade;
 
+use App\Models\Grade;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\Grades\StoreGradeRequest;
 
-class GradeController extends Controller 
+class GradeController extends Controller
 {
 
   /**
@@ -14,7 +17,8 @@ class GradeController extends Controller
    */
   public function index()
   {
-    
+    $grades = Grade::latest()->get();
+    return view('dashboard.grades.index',compact('grades'));
   }
 
   /**
@@ -24,7 +28,7 @@ class GradeController extends Controller
    */
   public function create()
   {
-    
+
   }
 
   /**
@@ -32,10 +36,31 @@ class GradeController extends Controller
    *
    * @return Response
    */
-  public function store(Request $request)
+  public function store(StoreGradeRequest $request)
   {
-    
+    try {
+        $validated = $request->validated();
+        $Grade = new Grade();
+        /*
+        $translations = [
+            'en' => $request->Name_en,
+            'ar' => $request->Name
+        ];
+        $Grade->setTranslations('Name', $translations);
+        */
+        $Grade->name = ['en' => $request->name_en, 'ar' => $request->name];
+        $Grade->notes = $request->notes;
+        $Grade->save();
+        session()->flash('success', __('messages.success'));
+        return redirect()->route('grades.index');
+    }
+
+    catch (\Exception $e){
+        session()->flash('error', __('messages.error'));
+        return redirect()->back()->withErrors(['error' => $e->getMessage()]);
+
   }
+}
 
   /**
    * Display the specified resource.
@@ -45,7 +70,7 @@ class GradeController extends Controller
    */
   public function show($id)
   {
-    
+
   }
 
   /**
@@ -56,7 +81,7 @@ class GradeController extends Controller
    */
   public function edit($id)
   {
-    
+
   }
 
   /**
@@ -67,7 +92,7 @@ class GradeController extends Controller
    */
   public function update($id)
   {
-    
+
   }
 
   /**
@@ -78,9 +103,9 @@ class GradeController extends Controller
    */
   public function destroy($id)
   {
-    
+
   }
-  
+
 }
 
 ?>

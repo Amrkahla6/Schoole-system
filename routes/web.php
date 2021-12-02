@@ -30,7 +30,13 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),'middleware' => [ 'lo
     });
     // Dashboard
     Route::get('/dashboard', 'HomeController@index')->name('dashboard');
-    Route::resource('grade', 'GradeController');
+    Route::group(['namespace' => 'Dashboard'], function () {
+
+        // Grade Routes
+        Route::group(['namespace' => 'Grade'], function () {
+            Route::resource('grades', 'GradeController');
+        });
+    });
 });
 
 
