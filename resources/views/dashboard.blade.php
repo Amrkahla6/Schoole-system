@@ -8,6 +8,9 @@
     <meta name="description" content="Webmin - Bootstrap 4 & Angular 5 Admin Dashboard Template" />
     <meta name="author" content="potenzaglobalsolutions.com" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    @section('title')
+        @lang('main_trans.Main_title')
+    @stop
     @include('layouts.head')
 </head>
 
@@ -39,7 +42,7 @@
                         <h4 class="mb-0"> Dashboard</h4>
                     </div>
                     <div class="col-sm-6">
-                        <ol class="breadcrumb pt-0 pr-0 float-left float-sm-right">
+                        <ol class="float-left pt-0 pr-0 breadcrumb float-sm-right">
                         </ol>
                     </div>
                 </div>
@@ -60,8 +63,8 @@
                                     <h4>65,650</h4>
                                 </div>
                             </div>
-                            <p class="text-muted pt-3 mb-0 mt-2 border-top">
-                                <i class="fa fa-exclamation-circle mr-1" aria-hidden="true"></i> 81% lower
+                            <p class="pt-3 mt-2 mb-0 text-muted border-top">
+                                <i class="mr-1 fa fa-exclamation-circle" aria-hidden="true"></i> 81% lower
                                 growth
                             </p>
                         </div>
@@ -81,8 +84,8 @@
                                     <h4>656</h4>
                                 </div>
                             </div>
-                            <p class="text-muted pt-3 mb-0 mt-2 border-top">
-                                <i class="fa fa-bookmark-o mr-1" aria-hidden="true"></i> Total sales
+                            <p class="pt-3 mt-2 mb-0 text-muted border-top">
+                                <i class="mr-1 fa fa-bookmark-o" aria-hidden="true"></i> Total sales
                             </p>
                         </div>
                     </div>
@@ -101,8 +104,8 @@
                                     <h4>$65656</h4>
                                 </div>
                             </div>
-                            <p class="text-muted pt-3 mb-0 mt-2 border-top">
-                                <i class="fa fa-calendar mr-1" aria-hidden="true"></i> Sales Per Week
+                            <p class="pt-3 mt-2 mb-0 text-muted border-top">
+                                <i class="mr-1 fa fa-calendar" aria-hidden="true"></i> Sales Per Week
                             </p>
                         </div>
                     </div>
@@ -121,8 +124,8 @@
                                     <h4>62,500+</h4>
                                 </div>
                             </div>
-                            <p class="text-muted pt-3 mb-0 mt-2 border-top">
-                                <i class="fa fa-repeat mr-1" aria-hidden="true"></i> Just Updated
+                            <p class="pt-3 mt-2 mb-0 text-muted border-top">
+                                <i class="mr-1 fa fa-repeat" aria-hidden="true"></i> Just Updated
                             </p>
                         </div>
                     </div>
@@ -145,7 +148,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Market summary</h5>
                             <h4>$50,500 </h4>
-                            <div class="row mt-20">
+                            <div class="mt-20 row">
                                 <div class="col-4">
                                     <h6>Apple</h6>
                                     <b class="text-info">+ 82.24 % </b>
@@ -160,7 +163,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="sparkline2" class="scrollbar-x text-center"></div>
+                        <div id="sparkline2" class="text-center scrollbar-x"></div>
                     </div>
                 </div>
                 <div class="col-xl-8 mb-30">
@@ -184,7 +187,7 @@
                                         <h6 class="text-success">Income</h6>
                                         <p>+584</p>
                                     </div>
-                                    <div class="clearfix  mr-50">
+                                    <div class="clearfix mr-50">
                                         <h6 class="text-danger"> Outcome</h6>
                                         <p>-255</p>
                                     </div>
@@ -203,8 +206,8 @@
                             <div class="row mb-30">
                                 <div class="col-md-6">
                                     <div class="clearfix">
-                                        <p class="mb-10 float-left">Positive</p>
-                                        <i class="mb-10 text-success float-right fa fa-arrow-up"> </i>
+                                        <p class="float-left mb-10">Positive</p>
+                                        <i class="float-right mb-10 text-success fa fa-arrow-up"> </i>
                                     </div>
                                     <div class="progress progress-small">
                                         <div class="skill2-bar bg-success" role="progressbar" style="width: 70%"
@@ -214,8 +217,8 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="clearfix">
-                                        <p class="mb-10 float-left">Negative</p>
-                                        <i class="mb-10 text-danger float-right fa fa-arrow-down"> </i>
+                                        <p class="float-left mb-10">Negative</p>
+                                        <i class="float-right mb-10 text-danger fa fa-arrow-down"> </i>
                                     </div>
                                     <div class="progress progress-small">
                                         <div class="skill2-bar bg-danger" role="progressbar" style="width: 30%"
@@ -269,11 +272,11 @@
                                                 <span class="mb-0">by - <b class="text-info">PotenzaUser</b></span>
                                             </div>
                                             <div class="col-md-2 col-sm-6 col-6 sm-mt-20">
-                                                <h5 class="text-primary mb-0"><b>45,436</b></h5>
+                                                <h5 class="mb-0 text-primary"><b>45,436</b></h5>
                                                 <span>Sales</span>
                                             </div>
                                             <div class="col-md-2 col-sm-6 col-6 sm-mt-20">
-                                                <h5 class="text-secondary mb-0"><b>$05,236</b></h5>
+                                                <h5 class="mb-0 text-secondary"><b>$05,236</b></h5>
                                                 <span>Revenue</span>
                                             </div>
                                         </div>
@@ -289,11 +292,11 @@
                                                 </span>
                                             </div>
                                             <div class="col-md-2 col-sm-6 col-6 sm-mt-20">
-                                                <h5 class="text-success mb-0"><b>23,462</b></h5>
+                                                <h5 class="mb-0 text-success"><b>23,462</b></h5>
                                                 <span>Sales</span>
                                             </div>
                                             <div class="col-md-2 col-sm-6 col-6 sm-mt-20">
-                                                <h5 class="text-danger mb-0"><b>$166</b></h5>
+                                                <h5 class="mb-0 text-danger"><b>$166</b></h5>
                                                 <span>Revenue</span>
                                             </div>
                                         </div>
@@ -309,11 +312,11 @@
                                                 </span>
                                             </div>
                                             <div class="col-md-2 col-sm-6 col-6 sm-mt-20">
-                                                <h5 class="text-warning mb-0"><b>5,566</b></h5>
+                                                <h5 class="mb-0 text-warning"><b>5,566</b></h5>
                                                 <span>Sales</span>
                                             </div>
                                             <div class="col-md-2 col-sm-6 col-6 sm-mt-20">
-                                                <h5 class="text-info mb-0"><b>$4,126</b></h5>
+                                                <h5 class="mb-0 text-info"><b>$4,126</b></h5>
                                                 <span>Revenue</span>
                                             </div>
                                         </div>
@@ -329,11 +332,11 @@
                                                 </span>
                                             </div>
                                             <div class="col-md-2 col-sm-6 col-6 sm-mt-20">
-                                                <h5 class="text-dark mb-0"><b>5,446</b></h5>
+                                                <h5 class="mb-0 text-dark"><b>5,446</b></h5>
                                                 <span>Sales</span>
                                             </div>
                                             <div class="col-md-2 col-sm-6 col-6 sm-mt-20">
-                                                <h5 class="text-success mb-0"><b>$436</b></h5>
+                                                <h5 class="mb-0 text-success"><b>$436</b></h5>
                                                 <span>Revenue</span>
                                             </div>
                                         </div>
@@ -351,11 +354,11 @@
                                                 </span>
                                             </div>
                                             <div class="col-md-2 col-sm-6 col-6 sm-mt-20">
-                                                <h5 class="text-dark mb-0"><b>12,549</b></h5>
+                                                <h5 class="mb-0 text-dark"><b>12,549</b></h5>
                                                 <span>Sales</span>
                                             </div>
                                             <div class="col-md-2 col-sm-6 col-6 sm-mt-20">
-                                                <h5 class="theme-color mb-0"><b>$1,656</b></h5>
+                                                <h5 class="mb-0 theme-color"><b>$1,656</b></h5>
                                                 <span>Revenue</span>
                                             </div>
                                         </div>
@@ -371,11 +374,11 @@
                                                 </span>
                                             </div>
                                             <div class="col-md-2 col-sm-6 col-6 sm-mt-20">
-                                                <h5 class="text-primary mb-0"><b>1,366</b></h5>
+                                                <h5 class="mb-0 text-primary"><b>1,366</b></h5>
                                                 <span>Sales</span>
                                             </div>
                                             <div class="col-md-2 col-sm-6 col-6 sm-mt-20">
-                                                <h5 class="text-secondary mb-0"><b>$4,536</b></h5>
+                                                <h5 class="mb-0 text-secondary"><b>$4,536</b></h5>
                                                 <span>Revenue</span>
                                             </div>
                                         </div>
@@ -391,11 +394,11 @@
                                                 </span>
                                             </div>
                                             <div class="col-md-2 col-sm-6 col-6 sm-mt-20">
-                                                <h5 class="text-success mb-0"><b>465</b></h5>
+                                                <h5 class="mb-0 text-success"><b>465</b></h5>
                                                 <span>Sales</span>
                                             </div>
                                             <div class="col-md-2 col-sm-6 col-6 sm-mt-20">
-                                                <h5 class="text-danger mb-0"><b>$499</b></h5>
+                                                <h5 class="mb-0 text-danger"><b>$499</b></h5>
                                                 <span>Revenue</span>
                                             </div>
                                         </div>
@@ -411,11 +414,11 @@
                                                 </span>
                                             </div>
                                             <div class="col-md-2 col-sm-6 col-6 sm-mt-20">
-                                                <h5 class="text-warning mb-0"><b>4,456</b></h5>
+                                                <h5 class="mb-0 text-warning"><b>4,456</b></h5>
                                                 <span>Sales</span>
                                             </div>
                                             <div class="col-md-2 col-sm-6 col-6 sm-mt-20">
-                                                <h5 class="text-info mb-0"><b>$6,485</b></h5>
+                                                <h5 class="mb-0 text-info"><b>$6,485</b></h5>
                                                 <span>Revenue</span>
                                             </div>
                                         </div>
@@ -443,11 +446,11 @@
                                             <p>Automotive WordPress Theme </p>
                                         </div>
                                     </div>
-                                    <div class="divider dotted mt-20"></div>
+                                    <div class="mt-20 divider dotted"></div>
                                 </li>
                                 <li class="mb-20">
                                     <div class="media">
-                                        <div class="position-relative clearfix">
+                                        <div class="clearfix position-relative">
                                             <img class="img-fluid mr-15 avatar-small" src="images/item/02.png" alt="">
                                         </div>
                                         <div class="media-body">
@@ -456,7 +459,7 @@
                                             <p>Multi-purpose HTML5 Template </p>
                                         </div>
                                     </div>
-                                    <div class="divider dotted mt-20"></div>
+                                    <div class="mt-20 divider dotted"></div>
                                 </li>
                                 <li class="mb-20">
                                     <div class="media">
@@ -469,11 +472,11 @@
                                             <p> Multi-Purpose WordPress Theme </p>
                                         </div>
                                     </div>
-                                    <div class="divider dotted mt-20"></div>
+                                    <div class="mt-20 divider dotted"></div>
                                 </li>
                                 <li>
                                     <div class="media">
-                                        <div class="position-relative clearfix">
+                                        <div class="clearfix position-relative">
                                             <img class="img-fluid mr-15 avatar-small" src="images/item/04.png" alt="">
                                         </div>
                                         <div class="media-body">
@@ -517,9 +520,9 @@
                 <div class="col-xl-4 mb-30">
                     <div class="card card-statistics h-100">
                         <div class="p-4 text-center bg" style="background: url(images/bg/01.jpg);">
-                            <h5 class="mb-70 text-white position-relative">Michael Bean </h5>
+                            <h5 class="text-white mb-70 position-relative">Michael Bean </h5>
                             <div class="btn-group info-drop">
-                                <button type="button" class="dropdown-toggle-split text-white" data-toggle="dropdown"
+                                <button type="button" class="text-white dropdown-toggle-split" data-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="false"><i class="ti-more"></i></button>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="#"><i class="text-primary ti-files"></i> Add
@@ -533,28 +536,28 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body text-center position-relative">
+                        <div class="text-center card-body position-relative">
                             <div class="avatar-top">
                                 <img class="img-fluid w-25 rounded-circle " src="images/team/13.jpg" alt="">
                             </div>
                             <div class="row">
                                 <div class="col-sm-4 mt-30">
                                     <b>Files Saved</b>
-                                    <h4 class="text-success mt-10">1582</h4>
+                                    <h4 class="mt-10 text-success">1582</h4>
                                 </div>
                                 <div class="col-sm-4 mt-30">
                                     <b>Memory Used </b>
-                                    <h4 class="text-danger mt-10">58GB</h4>
+                                    <h4 class="mt-10 text-danger">58GB</h4>
                                 </div>
                                 <div class="col-sm-4 mt-30">
                                     <b>Spent Money</b>
-                                    <h4 class="text-warning mt-10">352,6$</h4>
+                                    <h4 class="mt-10 text-warning">352,6$</h4>
                                 </div>
                             </div>
-                            <div class="divider mt-20"></div>
+                            <div class="mt-20 divider"></div>
                             <p class="mt-30">17504 Carlton Cuevas Rd, Gulfport, MS, 39503</p>
                             <p class="mt-10">michael@webmin.com</p>
-                            <div class="social-icons color-icon mt-20">
+                            <div class="mt-20 social-icons color-icon">
                                 <ul>
                                     <li class="social-rss"><a href="#"><i class="fa fa-rss"></i></a></li>
                                     <li class="social-facebook"><a href="#"><i class="fa fa-facebook"></i></a>
@@ -580,22 +583,22 @@
                             <div class="col-12 sm-mb-30">
                                 <a href="#" data-toggle="modal" data-target="#add-category"
                                     class="btn btn-primary btn-block m-t-20">
-                                    <i class="fa fa-plus pr-2"></i> Create New
+                                    <i class="pr-2 fa fa-plus"></i> Create New
                                 </a>
                                 <div id="external-events" class="m-t-20">
                                     <br>
                                     <p class="text-muted">Drag and drop your event or click in the calendar</p>
                                     <div class="external-event bg-success fc-event">
-                                        <i class="fa fa-circle mr-2 vertical-middle"></i>New Theme Release
+                                        <i class="mr-2 fa fa-circle vertical-middle"></i>New Theme Release
                                     </div>
                                     <div class="external-event bg-info fc-event">
-                                        <i class="fa fa-circle mr-2 vertical-middle"></i>My Event
+                                        <i class="mr-2 fa fa-circle vertical-middle"></i>My Event
                                     </div>
                                     <div class="external-event bg-warning fc-event">
-                                        <i class="fa fa-circle mr-2 vertical-middle"></i>Meet manager
+                                        <i class="mr-2 fa fa-circle vertical-middle"></i>Meet manager
                                     </div>
                                     <div class="external-event bg-danger fc-event">
-                                        <i class="fa fa-circle mr-2 vertical-middle"></i>Create New theme
+                                        <i class="mr-2 fa fa-circle vertical-middle"></i>Create New theme
                                     </div>
                                 </div>
                             </div>
@@ -611,7 +614,7 @@
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span></button>
                                     </div>
-                                    <div class="modal-body p-20"></div>
+                                    <div class="p-20 modal-body"></div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                                         <button type="button" class="btn btn-success save-event">Create
@@ -631,7 +634,7 @@
                                         <button type="button" class="close" data-dismiss="modal"
                                             aria-hidden="true">&times;</button>
                                     </div>
-                                    <div class="modal-body p-20">
+                                    <div class="p-20 modal-body">
                                         <form>
                                             <div class="row">
                                                 <div class="col-md-6">

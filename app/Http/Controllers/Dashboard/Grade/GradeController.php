@@ -6,6 +6,7 @@ use App\Models\Grade;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Grades\StoreGradeRequest;
+use App\Http\Requests\Grades\updateGradeRequest;
 
 class GradeController extends Controller
 {
@@ -90,8 +91,23 @@ class GradeController extends Controller
    * @param  int  $id
    * @return Response
    */
-  public function update($id)
+  public function update(updateGradeRequest $request)
   {
+    try {
+        $validated = $request->validated();
+        $grade = Grade::find($request->id);
+        $grade->update([
+          'name'   => ['en' => $request->name_en, 'ar' => $request->name],
+          'notes'  => $request->notes,
+      ]);
+
+      session()->flash('success', __('messages.Update'));
+      return redirect()->back();
+    } catch(\Exception $e) {
+        return redirect()->back()->withErrors(['error' => $e->getMessage()]);
+    }
+
+
 
   }
 
@@ -101,9 +117,12 @@ class GradeController extends Controller
    * @param  int  $id
    * @return Response
    */
-  public function destroy($id)
+  public function destroy(Request $request, $id)
   {
-
+    $id = $request->id;
+    Grade::findOrFail($id)->delete();
+    session()->flash('error', __('messages.Delete'));
+    return redirect()->back();
   }
 
 }
