@@ -37,6 +37,14 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),'middleware' => [ 'lo
             Route::resource('grades', 'GradeController')->except(['update']);
             Route::put('grades/update', 'GradeController@update')->name('grades.update');
         });
+
+
+        // Class Rooms Routes
+        Route::group(['namespace' => 'Classroom'], function () {
+            Route::resource('classroom', 'ClassroomController')->except(['update']);
+            Route::put('classroom/update', 'ClassroomController@update')->name('classroom.update');
+        });
+
     });
 });
 

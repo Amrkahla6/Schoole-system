@@ -105,7 +105,7 @@ class GradeController extends Controller
       return redirect()->back();
     } catch(\Exception $e) {
         return redirect()->back()->withErrors(['error' => $e->getMessage()]);
-    }
+  }
 
 
 
