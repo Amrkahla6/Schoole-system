@@ -26,7 +26,7 @@
                                                {{-- <label for="Name"
                                                     class="mr-sm-2">{{ trans('classrooms.Name_class') }}
                                                 :</label> --}}
-                                            <input class="form-control" type="text" placeholder="{{ trans('classrooms.Name_class_en')}}" name="name"  />
+                                            <input class="form-control" type="text" placeholder="{{ trans('classrooms.Name_class')}}" name="name"  />
                                         </div>
 
 
@@ -34,7 +34,7 @@
                                             {{-- <label for="Name"
                                                 class="mr-sm-2">{{ trans('classrooms.Name_class_en') }}
                                             :</label> --}}
-                                            <input class="form-control" type="text" placeholder="{{ trans('classrooms.Name_class')}}" name="name_en" />
+                                            <input class="form-control" type="text" placeholder="{{ trans('classrooms.Name_class_en')}}" name="name_en" />
                                         </div>
 
 
