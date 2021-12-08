@@ -24,6 +24,7 @@ return [
   'Warning_Grade' => 'هل انت متاكد من الحذف',
   'delete_checkbox' => 'خذف الصفوف',
   'delete-all' => 'حذف المحدد',
+  'Search_By_Grade' => 'بحث ب اسم المرحله',
 
 
 ];

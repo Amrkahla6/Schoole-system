@@ -24,12 +24,23 @@
                 {{ trans('classrooms.add_class') }}
             </button>
 
-
             <button type="button" class="button x-small" id="btn_delete_all">
                 {{ trans('classrooms.delete_checkbox') }}
             </button>
 
             <br><br>
+
+            <form action="{{ route('classroom.filter_classes') }}" method="GET">
+               @csrf
+                <select class="" data-style="btn-info" name="grade_id" required
+                        onchange="this.form.submit()">
+                    <option value="" selected disabled>{{ trans('classrooms.Search_By_Grade') }}</option>
+                    @foreach ($grades as $grade)
+                        <option value="{{ $grade->id }}">{{ $grade->Name }}</option>
+                    @endforeach
+                </select>
+            </form>
+
           <div class="table-responsive">
             <table id="datatable" class="table p-0 table-striped table-bordered">
                 <thead>
@@ -42,7 +53,15 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($classes as $index => $item)
+
+                    @if (isset($details))
+                        <?php $listClasses = $details; ?>
+                    @else
+
+                        <?php $listClasses = $classes; ?>
+                    @endif
+
+                    @foreach ($listClasses as $index => $item)
                         <tr>
                             <td>{{$index +1 }}</td>
                             <td>{{$item->name}}</td>

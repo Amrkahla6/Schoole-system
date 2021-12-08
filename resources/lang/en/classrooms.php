@@ -22,4 +22,5 @@ return [
     'chooseGrade' => 'Choose Grade',
     'delete_checkbox' => 'Delete Checkbox',
     'delete-all' => 'Delete Checked',
+    'Search_By_Grade' => 'Search by Grade',
 ];
