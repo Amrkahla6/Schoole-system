@@ -23,6 +23,12 @@
             <button type="button" class="button x-small" data-toggle="modal" data-target="#exampleModal">
                 {{ trans('classrooms.add_class') }}
             </button>
+
+
+            <button type="button" class="button x-small" id="btn_delete_all">
+                {{ trans('classrooms.delete_checkbox') }}
+            </button>
+
             <br><br>
           <div class="table-responsive">
             <table id="datatable" class="table p-0 table-striped table-bordered">
@@ -32,6 +38,7 @@
                         <th>@lang('classrooms.className')</th>
                         <th>@lang('classrooms.Name_Grade')</th>
                         <th>@lang('classrooms.Processes')</th>
+                        <th><input name="select_all" id="example-select-all" type="checkbox" onclick="CheckAll('box1', this)" /></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -53,6 +60,7 @@
                                         class="fa fa-trash"></i>
                                 </button>
                             </td>
+                            <td><input type="checkbox"  value="{{ $item->id }}" class="box1" ></td>
                         </tr>
                     @endforeach
                 </tbody>
@@ -75,6 +83,7 @@
   @include('dashboard.classrooms.create')
   @include('dashboard.classrooms.edit')
   @include('dashboard.classrooms.delete')
+  @include('dashboard.classrooms.delete-all')
 </div>
 <!-- row closed -->
 @endsection
@@ -104,5 +113,23 @@
         var modal = $(this)
         modal.find('.modal-body #id').val(id);
     })
+</script>
+
+
+
+<script type="text/javascript">
+    // Delete All
+    $(function() {
+        $("#btn_delete_all").click(function() {
+            var selected = new Array();
+            $("#datatable input[type=checkbox]:checked").each(function() {
+                selected.push(this.value);
+            });
+            if (selected.length > 0) {
+                $('#delete_all').modal('show')
+                $('input[id="delete_all_id"]').val(selected);
+            }
+        });
+    });
 </script>
 @endsection

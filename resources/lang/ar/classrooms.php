@@ -22,6 +22,8 @@ return [
   'Close' => 'اغلاق',
   'chooseGrade' => 'اختر المرحله الدراسيه',
   'Warning_Grade' => 'هل انت متاكد من الحذف',
+  'delete_checkbox' => 'خذف الصفوف',
+  'delete-all' => 'حذف المحدد',
 
 
 ];

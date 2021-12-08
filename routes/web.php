@@ -43,6 +43,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),'middleware' => [ 'lo
         Route::group(['namespace' => 'Classroom'], function () {
             Route::resource('classroom', 'ClassroomController')->except(['update']);
             Route::put('classroom/update', 'ClassroomController@update')->name('classroom.update');
+            Route::delete('delete_all', 'ClassroomController@delete_all')->name('classroom.delete_all');
         });
 
     });

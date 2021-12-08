@@ -72,4 +72,13 @@ class ClassroomController extends Controller
     session()->flash('error', __('messages.Delete'));
     return redirect()->back();
   }
+
+  public function delete_all(Request $request)
+  {
+      $delete_all_id = explode(",", $request->delete_all_id);
+
+      Classroom::whereIn('id', $delete_all_id)->Delete();
+      session()->flash('error', __('messages.Delete'));
+      return redirect()->back();
+  }
 }

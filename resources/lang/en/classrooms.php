@@ -20,4 +20,6 @@ return [
     'Delete'=>'Delete',
     'Close' => 'Close',
     'chooseGrade' => 'Choose Grade',
+    'delete_checkbox' => 'Delete Checkbox',
+    'delete-all' => 'Delete Checked',
 ];
